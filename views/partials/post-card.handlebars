@@ -1,0 +1,12 @@
+<a href="/api/posts/{{id}}" class="card-link">
+    <div class="new-custom-card mx-5 mb-4">
+        <div class="new-custom-card-header d-block p-2">
+            <h4 class="card-title ">{{title}}</h4>
+            <h5 class="card-title ">{{user.username}} {{format_date createdAt}}</h5>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="custom-card-body d-block">
+            <p class="custom-card-text pt-3 px-3">{{content}}</p>
+        </div>
+    </div>
+</a>

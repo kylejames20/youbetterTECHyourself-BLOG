@@ -1,0 +1,51 @@
+<div id="page-title-container" class="pb-4">
+    <div class="d-inline">
+        <div class="w-25 py-1 px-0 mb-3 mx-5" id="h1container">
+            <h1 class="text-center">The Tech Blog</h1>
+        </div>
+    </div>
+</div>
+
+<main class="the-content-area pt-4">
+
+    <div class="new-custom-card mx-5 mb-4" data-id={{post.id}}>
+        <div class="new-custom-card-header d-block p-2">
+            <h4 class="card-title">{{post.title}}</h4>
+            <h5 class="card-title ">{{post.post_username}} {{format_date post.createdAt}}</h5>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="custom-card-body d-block">
+            <p class="custom-card-text pt-3 px-3">{{post.content}}</p>
+        </div>
+    </div>
+
+    {{#each post.comments}}
+
+    <div class="new-custom-card mx-5 mb-4">
+        <div class="custom-comment-header d-block p-2 mb-3">
+            <h5 class="card-title "></h5>
+        </div>
+        <div class="custom-card-body d-block">
+            <p class="custom-card-text pt-3 px-3 mb-2">{{content}}</p>
+            <p class="custom-card-text pt-3 px-3 mb-2">--{{poster_username}}, {{format_date createdAt}}</p>
+        </div>
+    </div>
+
+    {{/each}}
+
+    <div class="new-custom-card mx-5 mb-4">
+        <div class="custom-comment-header d-block p-2 mb-3">
+            <h5 class="card-title "></h5>
+        </div>
+        <div class="custom-card-body d-block">
+            <form>
+                <div class="form-group d-block px-2 mb- 2 my-1 mx-2">
+                    <label for="comment-content">Comment</label>
+                    <textarea class="form-control" id="comment-content" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn my-1 mx-2" id="new-comment-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</main>
