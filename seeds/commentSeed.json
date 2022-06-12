@@ -3,18 +3,18 @@
         "content": "Good",
         "post_id": "1",
         "user_id": "1",
-        "poster_username": "Lloyd Christmas"
+        "user_username": "Lloyd Christmas"
     },
     {
         "content": "Meh",
         "post_id": "2",
         "user_id": "1",
-        "poster_username": "Lloyd Christmas"
+        "user_username": "Lloyd Christmas"
     },
     {
         "content": "Booooo",
         "post_id": "2",
         "user_id": "3",
-        "poster_username": "Mary Swanson"
+        "user_username": "Mary Swanson"
     }
 ]
