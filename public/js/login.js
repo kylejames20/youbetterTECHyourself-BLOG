@@ -1,5 +1,5 @@
-const newSignupButton = document.querySelector('#new-signup-btn');
-const existingLoginButton = document.querySelector('#existing-login-button');
+const newSignupButton = document.querySelector('#sign-up-form');
+const existingLoginButton = document.querySelector('#login-form');
 
 const newestUserSignup = async (e) => {
     e.preventDefault();
@@ -52,9 +52,9 @@ const existingUserLogin = async (e) => {
 };
 
 if (newSignupButton) {
-    newSignupButton.addEventListener('click', newestUserSignup);
+    newSignupButton.addEventListener('submit', newestUserSignup);
 };
 
 if (existingLoginButton) {
-    existingLoginButton.addEventListener('click', existingUserLogin);
+    existingLoginButton.addEventListener('submit', existingUserLogin);
 };

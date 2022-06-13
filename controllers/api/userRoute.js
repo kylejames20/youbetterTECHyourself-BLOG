@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         const dbaseUserData = await User.create(newestUser);
 
         req.session.save(() => {
-            req.session.loggedIn = true;
+            req.session.loggingIn = true;
             req.session.user_id = dbaseUserData.id;
             res.status(200).json(dbaseUserData);
         });
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
         };
 
         req.session.save(() => {
-            req.session.loggedIn = true;
+            req.session.loggingIn = true;
             req.session.user_id = dbaseUserData.id;
             res
                 .status(200)
@@ -62,6 +62,17 @@ router.post('/login', async (req, res) => {
         res.status(500).json(err);
     }
 });
+router.post('/logout', (req, res) => {
+    if (req.session.loggingIn) {
 
+        req.session.destroy(() => {
+            res.redirect('/');
+            return;
+        });
+    } else {
+        res.status(404).end();
+    }
+
+});
 
 module.exports = router;
