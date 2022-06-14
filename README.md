@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![generated HTML screen shot](./images/herokublog.png)
+
 This tech blog allows users to login, create, edit, delete and comment on their own posts.
 
 ## Description
@@ -41,3 +43,5 @@ First, you will need to create an account and sign up. Once you have done that, 
 ## Deployed
 
 My tech blog can be found at: https://github.com/kylejames20/youbetterTECHyourself-BLOG
+
+You can view the deployed public version at: https://hidden-gorge-97151.herokuapp.com/login
